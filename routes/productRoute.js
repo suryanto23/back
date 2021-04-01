@@ -6,18 +6,22 @@ const {Product} = require('../models/indexModel');
 router.get("/" , async (req,res)=>{
 
 
-    try {
+    // try {
         
-        const productData = await Product.find({});
-        res.json({
-            message: "Display All Product",
-            data: productData
-        })
+    //     const productData = await Product.find({});
+    //     res.json({
+    //         message: "Display All Product",
+    //         data: productData
+    //     })
         
-    } catch (e) {
-        console.log(e)
+    // } catch (e) {
+    //     console.log(e)
         
-    }
+    // }
+
+    res.json({
+        message: "asdasdd"
+    })
 
 
 });
