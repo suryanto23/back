@@ -20,6 +20,7 @@ router.post ("/register" , async (req,res)=>{
         if (!hashedPassword) throw new Error ("Terjadi Kesalahan, Error Hash Password");
             const userNew = await User.create({
             name: userData.name,
+            email: userData.email,
             password: hashedPassword 
         });
 
