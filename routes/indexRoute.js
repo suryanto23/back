@@ -6,7 +6,7 @@ const productRouter = require('./productRoute')
 const shipmentRouter = require('./shipmentRoute.js')
 
 //Auth
-router.use("/",userRouter);
+router.use("/auth",userRouter);
 
 router.use("/product",productRouter);
 router.use("/shipment",shipmentRouter);
