@@ -59,5 +59,20 @@ router.post ("/login" , async (req,res)=>{
    
 });
 
+
+router.get("/user" , async (req,res)=>{
+    try {
+        // Got all user list
+        const userData = await User.find({})
+        res.json({
+            messeage: "Get all user",
+            data: userData
+        })
+    } catch (e) {
+        console.log(e)
+    }
+})
+
+
 module.exports = router;
 
