@@ -6,7 +6,7 @@ router.get("/" , async (req,res)=>{
 
     try {
         
-        const cartData = await Cart.find({});
+        const cartData = await Cart.find({}).populate("product" , "productName productPrice")
         res.json({
             message: "Display User Cart",
             data: cartData
